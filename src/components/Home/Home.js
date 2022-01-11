@@ -5,10 +5,10 @@ import { APIKey } from "../../common/apis/MovieApiKey";
 
 const Home = () => {
   useEffect(() => {
-    const movieText = "Harry";
+    const movieYear = 2021;
     const fetchMovies = async () => {
       const response = await movieApi
-        .get(`?apiKey=${APIKey}&s=${movieText}&type=movie`)
+        .get(`?apiKey=${APIKey}&y=${movieYear}&type=movie`)
         .catch((err) => {
           console.log("Err :", err);
         });
